@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arpita Goswami</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500\&amp;family=Manrope:wght@300;400;500;600\&amp;family=IBM+Plex+Mono:wght@400;500\&amp;family=Caveat:wght@500;700\&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@300;400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Caveat:wght@500;700&amp;display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#15120d; --bg-soft:#1b170f; --ivory:#f3ecdf; --muted:#a9987d;
@@ -24,7 +24,6 @@
   /* gold dust grain over everything */
   body::before{content:'';position:fixed;inset:0;z-index:998;pointer-events:none;opacity:.45;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .75 0 0 0 0 .4 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-
   /* aurora glows + star field */
   body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;animation:twinkle 7s ease-in-out infinite alternate;
     background:
@@ -59,23 +58,11 @@
   #toolbar button:hover,#toolbar button.active{background:var(--gold);color:#15120d;}
 
   /* sidebar */
-  aside {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 64px 34px 48px;
-  border-right: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  scrollbar-width: thin;
-  min-width: 0;
-}
+  aside{position:sticky;top:0;height:100vh;overflow-y:auto;padding:48px 34px;border-right:1px solid var(--line);display:flex;flex-direction:column;scrollbar-width:thin;}
   .avatar-wrap{position:relative;width:176px;height:176px;margin-bottom:32px;flex-shrink:0;}
   .avatar-wrap::before{content:'';position:absolute;inset:-7px;border-radius:58% 42% 55% 45%/48% 56% 44% 52%;background:conic-gradient(from 0deg,#8a6a1c,#e9c766,#fff1c2,#c9a02c,#8a6a1c);animation:spin 16s linear infinite;}
   .avatar{position:relative;width:100%;height:100%;object-fit:cover;border-radius:58% 42% 55% 45%/48% 56% 44% 52%;border:4px solid var(--bg);display:block;}
-  .hello{position:absolute;left:128px;top:-42px;font-family:'Caveat',cursive;font-size:1.4rem;color:var(--gold-light);rotate:-9deg;white-space:nowrap;}
+  .hello{position:absolute;left:170px;top:-6px;font-family:'Caveat',cursive;font-size:1.4rem;color:var(--gold-light);rotate:-9deg;white-space:nowrap;}
   .side-name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem;line-height:1.15;display:inline-block;}
   .side-tag{color:var(--muted);font-size:.86rem;margin-top:8px;line-height:1.5;}
   .side-nav{margin-top:38px;display:flex;flex-direction:column;gap:14px;}
@@ -92,7 +79,6 @@
   .side-email-alt{font-size:.72rem;color:var(--muted);text-align:center;margin-top:4px;text-decoration:none;}
   .side-email-alt:hover{color:var(--gold-light);}
 
-  /* MAIN */
   main{min-width:0;}
   .wrap{max-width:760px;margin:0 auto;padding:0 40px;}
 
@@ -159,8 +145,7 @@
   .exp-card ul{list-style:none;}
   .exp-card li{margin-bottom:10px;padding-left:18px;position:relative;}
   .exp-card li::before{content:'✦';position:absolute;left:0;color:var(--gold);font-size:.6rem;top:.5em;}
- 
-  /* projects */
+
   .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
   .proj-card{padding:26px;}
   .proj-card:nth-child(odd){rotate:-.35deg;}
@@ -171,12 +156,10 @@
   .proj-card li{margin-bottom:8px;padding-left:18px;position:relative;}
   .proj-card li::before{content:'✦';position:absolute;left:0;color:var(--gold);font-size:.6rem;top:.5em;}
 
-  /* skills */
   .skill-group{margin-bottom:32px;}
   .skill-group h4{font-family:'IBM Plex Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;}
   .skill-tags{display:flex;flex-wrap:wrap;gap:10px;}
- 
-  /* certificates */
+
   .cert-list{display:flex;flex-direction:column;gap:12px;}
   .cert-item{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;text-decoration:none;}
   .cert-item:hover{translate:4px 0;}
@@ -194,7 +177,6 @@
   .act-date{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted);}
   .act-desc{color:var(--muted);font-size:.92rem;max-width:70ch;margin-top:4px;}
 
-  /* footer */
   footer{padding:90px 0 70px;}
   .moon{width:96px;display:block;margin-bottom:18px;}
   .foot-title{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2rem;max-width:20ch;}
@@ -208,192 +190,20 @@
   html.js .reveal{opacity:0;translate:0 22px;transition:opacity .8s ease,translate .6s cubic-bezier(.2,.7,.2,1),rotate .4s,box-shadow .3s;}
   html.js .reveal.in{opacity:1;translate:0 0;}
 
-  
-/* TABLET */
-@media (max-width: 900px) {
-  body {
-    display: block;
-    width: 100%;
+  @media (max-width:900px){
+    body{display:block;}
+    aside{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line);flex-direction:row;align-items:center;flex-wrap:wrap;gap:24px;padding:32px 28px;}
+    .avatar-wrap{width:120px;height:120px;margin-bottom:0;}
+    .hello{left:136px;font-size:1.15rem}
+    .side-nav{display:none;}
+    .side-contact{margin-top:0;flex-direction:row;flex-wrap:wrap;padding-top:0;}
+    .wrap{padding:0 24px;}
+    .proj-grid{grid-template-columns:1fr;}
+    .kpi-strip{gap:16px 0;}
+    .kpi-item{width:45%;margin-right:0;padding-left:14px;border-left:1px solid var(--line);}
+    .orbits{width:300px;right:-130px;opacity:.3;}
+    section:not(.hero)::before,footer::before{left:24px;right:24px;}
   }
-
-  aside {
-    position: relative;
-    top: auto;
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--line);
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 32px 28px;
-  }
-
-  .avatar-wrap {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 0;
-  }
-
-  .hello {
-    left: 88px;
-    top: -30px;
-    font-size: 1.15rem;
-  }
-
-  .side-nav {
-    display: none;
-  }
-
-  .side-contact {
-    margin-top: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 0;
-  }
-
-  .wrap {
-    width: 100%;
-    padding: 0 24px;
-  }
-
-  .proj-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .kpi-strip {
-    gap: 16px 0;
-  }
-
-  .kpi-item {
-    width: 45%;
-    margin-right: 0;
-    padding-left: 14px;
-  }
-
-  .orbits {
-    width: 300px;
-    right: -130px;
-    opacity: .3;
-  }
-
-  section:not(.hero)::before,
-  footer::before {
-    left: 24px;
-    right: 24px;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .wrap {
-    padding: 0 18px;
-  }
-
-  aside {
-    padding: 28px 20px;
-    gap: 18px;
-  }
-
-  .avatar-wrap {
-    width: 90px;
-    height: 90px;
-  }
-
-  .side-name {
-    font-size: 1.5rem;
-  }
-
-  .side-contact {
-    width: 100%;
-  }
-
-  .side-btn {
-    flex: 1;
-  }
-
-  .hero {
-    padding: 65px 0 50px;
-  }
-
-  h1 {
-    font-size: clamp(2rem, 9vw, 2.7rem);
-  }
-
-  .hero-sub {
-    font-size: .94rem;
-  }
-
-  section {
-    padding: 50px 0;
-  }
-
-  .sec-title {
-    font-size: 1.8rem;
-  }
-
-  .exp-card,
-  .proj-card {
-    padding: 20px;
-  }
-
-  .cert-item {
-    padding: 16px;
-    min-width: 0;
-  }
-
-  .cert-item > div {
-    min-width: 0;
-  }
-
-  .kpi-item {
-    width: 50%;
-    padding-left: 10px;
-  }
-
-  .kpi-item .lbl {
-    font-size: .58rem;
-    overflow-wrap: anywhere;
-  }
-
-  #toolbar {
-    right: 10px;
-    bottom: 10px;
-    gap: 6px;
-  }
-
-  #toolbar button {
-    padding: 9px 12px;
-    font-size: .65rem;
-  }
-
-  section:not(.hero)::before,
-  footer::before {
-    left: 18px;
-    right: 18px;
-  }
-
-  .foot-title {
-    font-size: 1.7rem;
-  }
-}
-
-/* PREVENT GRID OVERFLOW */
-@media (min-width: 901px) {
-  body {
-    grid-template-columns: 320px minmax(0, 1fr);
-  }
-}
-
-img, svg {
-  max-width: 100%;
-}
-
-main, section, .wrap, .proj-card, .exp-card {
-  min-width: 0;
-}
-
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
     *,*::before,*::after{animation:none!important;}
@@ -430,8 +240,8 @@ main, section, .wrap, .proj-card, .exp-card {
 
   <div class="side-contact">
     <a class="side-btn side-btn-solid" href="mailto:arpgs07@outlook.com">Get in touch</a>
-    <a class="side-btn side-btn-outline" href="https://www.linkedin.com/in/arpita-goswami-284664279" target="\_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="side-btn side-btn-outline" href="Arpita\_Goswami\_Resume.pdf" target="\_blank" rel="noopener">Resume ↗</a>
+    <a class="side-btn side-btn-outline" href="https://www.linkedin.com/in/arpita-goswami-284664279" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="side-btn side-btn-outline" href="Arpita_Goswami_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
     <a class="side-email-alt" href="mailto:arpgs07@outlook.com">arpgs07@outlook.com</a>
   </div>
 </aside>
@@ -471,7 +281,7 @@ main, section, .wrap, .proj-card, .exp-card {
   <div class="wrap">
     <h2 class="sec-title">A Little About <em>How I Think</em></h2>
     <div class="about-body">
-      <p class="scrawl" contenteditable="true"><em>I WILL figure things out!!</em></p>
+      <p class="scrawl" contenteditable="true"><em>I WILL figure things out! </em></p>
       <p contenteditable="true">CONNECT the dots. ASK questions. EXPLORE what’s possible beyond the obvious.</p>
       <p contenteditable="true">I'm curious about things that don't quite make sense yet. The messy beginnings, the unanswered questions, the ideas that need someone to connect a few dots and see where they lead.</p>
       <p contenteditable="true">With a background in Analytics and Administration, <em>I find myself somewhere between numbers, people, ideas, and possibilities.</em> I enjoy making sense of data, understanding people, thinking through strategies, and figuring out how things could work better. Often it could require looking at a problem differently. <em>Sometimes it means bringing people together, making sense of scattered ideas, or simply asking the question nobody has thought to ask yet.</em> Along the way, I've explored analytical projects, team leadership, cross-functional collaboration, and international academic experiences at Aalen University, Germany. Leading a university club taught me something I particularly value: good ideas are exciting, but bringing people together to make them happen is even better.</p>
@@ -712,56 +522,56 @@ main, section, .wrap, .proj-card, .exp-card {
     <div class="sec-kicker">Click any entry to open the certificate</div>
 
     <div class="cert-list">
-      <a class="cert-item" href="certificates/Global\_Trade\_FDI\_Exports\_Conference\_Paper.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Global_Trade_FDI_Exports_Conference_Paper.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Global Trade, FDI, Exports &amp; International Entrepreneurship</div>
           <div class="cert-meta">Conference paper · Presidency University · Apr 2026</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Women\_Empowerment\_Entrepreneurship\_Conference\_Paper.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Women_Empowerment_Entrepreneurship_Conference_Paper.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Women Empowerment, Rural &amp; Youth Entrepreneurship</div>
           <div class="cert-meta">Conference paper · Presidency University · Apr 2026</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Business\_Analyst\_Quest\_Runner\_Up.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Business_Analyst_Quest_Runner_Up.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Business Analyst Quest — Runner-Up</div>
           <div class="cert-meta">Analyst's Quest Quiz Competition, School of Management · May 2024</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Certificate\_of\_Appreciation\_Linchpin.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Certificate_of_Appreciation_Linchpin.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Certificate of Appreciation — LINCHPIN</div>
           <div class="cert-meta">Director of Human Resources · Jan – Dec 2024</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Certificate\_of\_Appreciation\_Pragya.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Certificate_of_Appreciation_Pragya.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Certificate of Appreciation — Pragya</div>
           <div class="cert-meta">Entrepreneurship Cell</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Linchpin\_Letter\_of\_Acceptance.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Linchpin_Letter_of_Acceptance.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Official Letter of Acceptance — LINCHPIN</div>
           <div class="cert-meta">University Club, Presidency University</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Internship\_Completion\_Certificate.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Internship_Completion_Certificate.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Internship Completion Certificate</div>
           <div class="cert-meta">Obensye Distribution India LLP · Jun – Aug 2025</div>
         </div>
         <div class="cert-arrow">↗</div>
       </a>
-      <a class="cert-item" href="certificates/Ostwurttemberg\_Ambassador\_Certificate.pdf" target="\_blank" rel="noopener">
+      <a class="cert-item" href="certificates/Ostwurttemberg_Ambassador_Certificate.pdf" target="_blank" rel="noopener">
         <div>
           <div class="cert-name">Honorary Ambassador of East Württemberg</div>
           <div class="cert-meta">Regional District Government of East Württemberg · Jan 2026</div>
@@ -824,8 +634,8 @@ main, section, .wrap, .proj-card, .exp-card {
     <h2 class="foot-title">Let's talk <em>Business</em>, Strategy or People.</h2>
     <div class="foot-links">
       <a href="mailto:arpgs07@outlook.com">arpgs07@outlook.com</a>
-      <a href="https://www.linkedin.com/in/arpita-goswami-284664279" target="\_blank" rel="noopener">LinkedIn</a>
-      <a href="Arpita\_Goswami\_Resume.pdf" target="\_blank" rel="noopener">Resume</a>
+      <a href="https://www.linkedin.com/in/arpita-goswami-284664279" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Arpita_Goswami_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
     <div class="foot-meta" contenteditable="true">Based in Aalen, Germany &amp; Bengaluru, India · Portfolio last updated on November, 2026</div>
   </div>
@@ -862,7 +672,7 @@ main, section, .wrap, .proj-card, .exp-card {
 
 
 <script>
- /* creative layer: cursor glow + scroll reveal */
+  /* creative layer: cursor glow + scroll reveal */
   (function(){
     var glow = document.getElementById('glow');
     var fine = window.matchMedia('(pointer:fine)').matches;
@@ -883,6 +693,4 @@ main, section, .wrap, .proj-card, .exp-card {
     } else { els.forEach(function(el){ el.classList.add('in'); }); }
   })();
 </script>
-  
-</body>
-</html>
+</body></html>
